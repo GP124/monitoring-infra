@@ -1,0 +1,7 @@
+hostPort: kafka:9999
+lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+rules:
+  - pattern: "kafka.server<type=(.+), name=(.+)><>(\d+)"
+    name: "kafka_$1_$2"
+    value: $3
